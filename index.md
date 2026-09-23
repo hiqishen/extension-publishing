@@ -9,3 +9,4 @@ permalink: /
 ## Markdown Plus
 
 - [隐私说明]({{ '/markdown-plus/privacy/' | relative_url }})
+- [本地助手下载与安装]({{ '/markdown-plus/native-host/' | relative_url }})
