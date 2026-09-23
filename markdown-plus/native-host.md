@@ -8,16 +8,25 @@ permalink: /markdown-plus/native-host/
 
 本地助手让 Chrome 商店版 Markdown Plus 将 `file://` Markdown 的修改写回原文件，并显示本地目录中的 Markdown 文件。仅需为当前用户安装一次；安装扩展本身不会自动安装助手。使用前还需在 Chrome 的扩展详情中开启“允许访问文件网址”。
 
-**下载状态：本页所述用户级 ZIP 尚未开放下载。** 各平台 ZIP 的公开下载链接和 SHA-256 校验值会在发布并完成对应平台安装、Chrome 调用和卸载验证后列出。请勿从第三方站点寻找或下载声称属于 Markdown Plus 的助手。
+**下载状态：以下链接将在 `markdown-plus-v0.1.1` Release 发布并上传对应 ZIP 后可用。** 发布前请勿从第三方站点寻找或下载声称属于 Markdown Plus 的助手。
 
 ## 选择安装包
 
-| 系统 | 架构 | 下载 |
+| 系统 | 架构 | 下载 ZIP |
 | --- | --- | --- |
-| macOS | Apple Silicon（arm64） | 待发布 |
-| macOS | Intel（x64） | 待发布 |
-| Windows | x64 | 待发布 |
-| Windows | ARM64 | 待发布 |
+| macOS | Apple Silicon（arm64） | [下载 macOS arm64]({{ site.github.repository_url }}/releases/download/markdown-plus-v0.1.1/Markdown-Plus-Native-Host-0.1.1-arm64-unsigned-public.zip) |
+| macOS | Intel（x64） | [下载 macOS x64]({{ site.github.repository_url }}/releases/download/markdown-plus-v0.1.1/Markdown-Plus-Native-Host-0.1.1-x64-unsigned-public.zip) |
+| Windows | x64 | [下载 Windows x64]({{ site.github.repository_url }}/releases/download/markdown-plus-v0.1.1/Markdown-Plus-Native-Host-0.1.1-windows-x64.zip) |
+| Windows | ARM64 | [下载 Windows ARM64]({{ site.github.repository_url }}/releases/download/markdown-plus-v0.1.1/Markdown-Plus-Native-Host-0.1.1-windows-arm64.zip) |
+
+下载后可用 SHA-256 核对 ZIP。四个文件的预期校验值为：
+
+```text
+737d3f1435ec66d00f0bd412cc60c953615dd0652c9f77bb433ca6eb155622b6  Markdown-Plus-Native-Host-0.1.1-arm64-unsigned-public.zip
+8ccd16c488904c13722ff46f8e8f7e59572aee1068aa99113888378271d8bcfb  Markdown-Plus-Native-Host-0.1.1-x64-unsigned-public.zip
+73c38a2ad316bc90dfbac59810f9da259531b166e0f0461d52bf7a604e2c3f82  Markdown-Plus-Native-Host-0.1.1-windows-x64.zip
+727197a4f6a57a2d5f7447aebfbed41e8b4b3793db9f2b4abd96237ae419ad99  Markdown-Plus-Native-Host-0.1.1-windows-arm64.zip
+```
 
 这些安装包包含独立运行的本地助手。无需另装 Node.js 或 Bun，也无需管理员权限。它没有独立的 `.app` 或 `.pkg`，不会常驻后台；Chrome 只在扩展请求时启动助手进程。
 
