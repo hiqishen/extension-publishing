@@ -8,20 +8,23 @@ permalink: /local-markdown-search/native-host/
 
 Chrome 商店版 Local Markdown Search 需要单独安装本机搜索助手。安装扩展不会自动安装助手；助手只在 Chrome 发起请求时运行。要从搜索结果打开本地文件，还需在 Chrome 扩展详情中开启“允许访问文件网址”。
 
-## 下载状态
+## 下载与校验
 
-助手安装包计划随 `c_utils` 仓库的 GitHub Release 标签 `chrome-local-markdown-search-v1.0.7` 发布，文件名为 `local-markdown-search-native-host.zip`。该 Release 和文件目前尚未发布，因此当前没有可用下载链接，也没有已发布的 SHA-256 校验值。请等待本页补充官方 Release 下载链接和校验值后再安装；不要从第三方站点下载声称属于本扩展的助手。
+适用于 macOS 和 Windows 的本机助手安装包：
 
-发布后，本页会提供适用于 macOS 和 Windows 的同一个 ZIP。下载后先按本页公布的 SHA-256 校验文件：
+- [下载 `local-markdown-search-native-host.zip`](https://github.com/hiqishen/extension-publishing/releases/download/local-markdown-search-v1.0.7/local-markdown-search-native-host.zip)
+- SHA-256：`839dff6a7e902795af1f746885082574ebcca89b59d8046faf9f12428c958ef0`
+
+下载后先按上述 SHA-256 校验文件：
 
 - macOS：`shasum -a 256 local-markdown-search-native-host.zip`
 - Windows PowerShell：`Get-FileHash .\local-markdown-search-native-host.zip -Algorithm SHA256`
 
-目前没有可供比对的校验值。未能从本页核实文件来源和校验值时，请停止安装。
+校验值不一致时，请停止安装。
 
 ## macOS 安装
 
-1. 发布后，从本页提供的链接下载 ZIP，并先核对 SHA-256。
+1. 从本页提供的链接下载 ZIP，并先核对 SHA-256。
 2. 在 Finder 中解压，双击 `setup-macos.command`。若设备尚未安装 `uv`，安装程序会先询问是否从 `astral.sh` 获取 `uv`；随后 `uv` 可能下载并管理 Python 3.12。首次运行还会让你选择要搜索的目录。
 3. 安装程序为当前用户注册本机助手，并打开 Chrome 扩展程序页。确认商店版扩展已安装；若要直接打开 `file://` 文件，在扩展详情中开启“允许访问文件网址”。
 
@@ -29,7 +32,7 @@ macOS 安装脚本和助手未签名，也未经 Apple 公证，Gatekeeper 可�
 
 ## Windows 安装
 
-1. 发布后，从本页提供的链接下载 ZIP，并先核对 SHA-256。
+1. 从本页提供的链接下载 ZIP，并先核对 SHA-256。
 2. 完整解压后运行 `setup-windows.cmd`。若设备尚未安装 `uv`，脚本会询问是否从 `astral.sh` 获取 `uv`；随后 `uv` 可能下载并管理 Python 3.12。首次运行还会让你选择要搜索的目录。
 3. 助手安装在当前用户目录，并在当前用户的 Chrome 注册表项中注册。安装程序会打开 Chrome 扩展程序页；确认商店版扩展已安装，并按需开启“允许访问文件网址”。
 
