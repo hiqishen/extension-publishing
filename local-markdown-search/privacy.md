@@ -35,4 +35,4 @@ Local Markdown Search 通过 Chrome 地址栏和扩展弹窗搜索用户指定�
 
 扩展偏好设置由 Chrome 保存，卸载扩展后由 Chrome 处理。本机助手不会随扩展自动卸载；目录配置和 SQLite 索引保存在 macOS 的 `~/Library/Application Support/LocalMarkdownSearch/`，或 Windows 的 `%LOCALAPPDATA%\LocalMarkdownSearch\`。用户可停止使用扩展并移除本机助手注册，再自行删除该数据目录以清除目录配置、索引和选择记录。删除本产品的数据不会删除用户原有的 Markdown 文件。
 
-如需反馈隐私问题，请使用本项目的公开支持入口，不要在公开问题中粘贴私人文件路径、文档正文或凭据。
+如需反馈隐私问题，请使用[项目支持入口]({{ '/local-markdown-search/' | relative_url }})，不要在公开问题中粘贴私人文件路径、文档正文或凭据。

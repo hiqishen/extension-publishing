@@ -11,7 +11,7 @@ permalink: /
 - [隐私说明]({{ '/markdown-plus/privacy/' | relative_url }})
 - [本地助手下载与安装]({{ '/markdown-plus/native-host/' | relative_url }})
 
-## Local Markdown Search
+## [Local Markdown Search]({{ '/local-markdown-search/' | relative_url }})
 
 - [隐私说明]({{ '/local-markdown-search/privacy/' | relative_url }})
 - [本机助手下载与安装]({{ '/local-markdown-search/native-host/' | relative_url }})
