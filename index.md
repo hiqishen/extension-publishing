@@ -15,3 +15,8 @@ permalink: /
 
 - [隐私说明]({{ '/local-markdown-search/privacy/' | relative_url }})
 - [本机助手下载与安装]({{ '/local-markdown-search/native-host/' | relative_url }})
+
+## [网页划线高亮]({{ '/web-highlighter/' | relative_url }})
+
+- [隐私政策]({{ '/web-highlighter/privacy/' | relative_url }})
+- [使用与支持]({{ '/web-highlighter/support/' | relative_url }})
