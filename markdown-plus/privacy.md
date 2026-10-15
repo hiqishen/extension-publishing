@@ -18,6 +18,7 @@ Markdown Plus 在浏览器中阅读和编辑 Markdown。扩展不要求注册账
 ## 本机保存的数据
 
 - 扩展使用 `chrome.storage.local` 保存阅读设置、安装时间，以及最近一次打开的来源类型、网址或本地文件地址、标题和打开时间。来源地址可能包含本地路径或网址参数；“恢复默认设置”会保留最近来源。
+- 扩展使用 `chrome.storage.session` 暂存各标签页的起始文件、当前文件和待导航文件地址及导航时间，用于从目录树返回原始文件，并在页面刷新或后台重启后保留导航状态。关闭对应标签页时删除该标签页的记录，浏览器会话结束时清除这些临时数据。
 - 用户手动选择本地文件时，扩展可在浏览器 IndexedDB 中保存“上次打开的文件”的文件句柄。浏览器可能在下次访问时再次请求文件权限。
 - 编辑中的文档正文保存在当前页面内存中；保存到文件时才写入用户选择的文件或原始本地文件。
 
@@ -33,7 +34,7 @@ Markdown Plus 在浏览器中阅读和编辑 Markdown。扩展不要求注册账
 
 `storage` 用于保存本机设置和最近来源；`nativeMessaging` 用于连接已安装的本地助手。对 `http`、`https` 和 `file` 地址的访问权限用于打开相应 Markdown 文档，其中 `file://` 访问仍需用户在 Chrome 中单独开启。
 
-卸载扩展可移除它在 Chrome 中保存的设置与文件句柄。“恢复默认设置”不会清除最近来源。本地助手不会随扩展自动卸载，应使用下载包内的卸载脚本移除其程序和注册清单。用户级部署位置为：
+卸载扩展可移除它在 Chrome 中保存的设置与文件句柄。“恢复默认设置”不会清除最近来源。本地助手不会随扩展自动卸载，应使用对应下载包或安装目录中的卸载脚本移除其程序和注册清单。Windows 自解包安装器也在“系统设置 > 应用”提供当前用户的卸载入口。用户级部署位置为：
 
 - macOS：`~/Library/Application Support/Markdown Plus/Native Messaging/` 中的助手与所有权标记，以及 `~/Library/Application Support/Google/Chrome/NativeMessagingHosts/com.markdown_plus.native.json`。
 - Windows：`%LOCALAPPDATA%\Markdown Plus\Native Host\` 中的助手、清单与所有权标记，以及当前用户的 Chrome Native Messaging 注册表项。
@@ -42,5 +43,7 @@ Markdown Plus 在浏览器中阅读和编辑 Markdown。扩展不要求注册账
 
 - `/Library/Google/Chrome/NativeMessagingHosts/com.markdown_plus.native.json`
 - `/Library/Application Support/Markdown Plus/markdown-plus-native-host`
+
+系统级目录还包含安装器的所有权标记、架构说明、使用说明与 `uninstall.command`。在 Finder 中双击该卸载脚本并提供管理员授权后，脚本仅在归属与目录内容核验通过时移除系统级助手及对应清单；未知文件会阻止删除。Windows 自解包安装器仍使用上述当前用户目录和注册项，并提供当前用户的卸载入口。
 
 删除扩展或助手不会删除用户已经保存或下载的 Markdown 文件。
