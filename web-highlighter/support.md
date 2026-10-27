@@ -6,7 +6,7 @@ permalink: /web-highlighter/support/
 
 # 网页划线高亮使用与支持
 
-适用于 0.2.0；需要 Chrome 120 或更新版本。
+适用于 0.2.0 和 0.2.1；需要 Chrome 120 或更新版本。
 
 ## 开始使用
 
